@@ -8,6 +8,10 @@
 	grid-row-gap: 2rem;
 	justify-items: center;
 
+	@media only screen and (max-width: $bp-medium) {
+		grid-column: full-start / full-end;
+	}
+
 
 	&__list {
 		display: grid;
@@ -15,6 +19,19 @@
 		grid-column-gap: 2rem;
 		grid-row-gap: 5vh;
 		align-items: center;
+
+		@media only screen and (max-width: $bp-medium) {
+			grid-template-columns: repeat(3,min-content max-content);
+			grid-column-gap: 2rem;
+		}
+		@media only screen and (max-width: $bp-small) {
+			grid-template-columns: repeat(2,min-content max-content);
+		}
+
+		@media only screen and (max-width: $bp-xm) {
+			grid-template-columns: min-content max-content;
+		}
+
 	}
 
 	&__img {
@@ -29,4 +46,5 @@
 		color: $color-grey-light-2;
 		margin-top: -3px;
 	}
+
 }
